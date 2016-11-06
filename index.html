@@ -13,6 +13,9 @@
                 <div class="enp-editor_ruler" id="js-ruler"></div>
             </div>
             <div class="enp-editor_scene">
+                <div id="app">
+      {{ count }}
+    </div>
                 <div id="js-breakpoints" style="position: relative"></div>
                 <div class="enp-editor_sceneContent" id="js-scene">
                     <span class="enp-editor_sceneHandlerHorz" id="js-handlerHorizontal"></span>
@@ -24,9 +27,6 @@
                     <div id="js-sceneContent" class="enp-editor_aceHolder"></div>  
                 </div>
             </div>
-            <div class="enp-editor_sidebar">
-               
-            </div>
             <div class="enp-editor_actionbar"> 
                 <ul>
                     <li class="is-active"><a href="#" id="js-togglePreview"><i class="icon-buffer"></i></a></li>
@@ -36,9 +36,7 @@
                 </ul>
             </div>
         </div>
-    <div id="app">
-      {{ count }}
-    </div>
+    
     <div id="js-scriptsGlobal"></div>
         <div id="js-styleGlobal"></div>
     <script src="build.js"></script>
