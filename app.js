@@ -2,21 +2,11 @@
 
 import Vue from 'vue'
 import store from './vuex/store'
+import Counter from './components/Counter.vue'
+ 
 
-
-const Counter = {
-  template: `<div>{{ count }}</div>`,
-  computed: {
-    count () {
-      console.log(this.$store)
-      return this.$store.state.count
-    }
-  }
-} 
 const app = new Vue({
   el: '#app',
-  // provide the store using the "store" option.
-  // this will inject the store instance to all child components.
   store,
   components: { Counter },
   template: `
@@ -30,10 +20,10 @@ const app = new Vue({
   `,
   methods: {
     increment () {
-      store.commit('increment')
+      store.dispatch('increment')
     },
     decrement () {
-    	store.commit('decrement')
+    	store.dispatch('decrement')
     }
   }
 })
