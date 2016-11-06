@@ -5,7 +5,18 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    count: 0
+    count: 0,
+    workspace: {
+    	scene: {
+    		mode: "computed", //css, js, html source
+    		size: [600, 300]
+    	},
+    	tree: {},
+    	toolbar: {}
+    },
+    scene: {
+
+    }
   },
   mutations: {
   	increment: state => state.count++,

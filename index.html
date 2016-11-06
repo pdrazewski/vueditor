@@ -5,11 +5,42 @@
   <head>
     <meta charset="utf-8">
     <title>Vueditor</title>
+    <link rel="stylesheet" href="common/css/style.css">
   </head>
-  <body>
+  <body class="enp-editor_body">
+    <div class="enp-editor_wrapper">
+            <div id="js-enp-editor_header" class="enp-editor_header">
+                <div class="enp-editor_ruler" id="js-ruler"></div>
+            </div>
+            <div class="enp-editor_scene">
+                <div id="js-breakpoints" style="position: relative"></div>
+                <div class="enp-editor_sceneContent" id="js-scene">
+                    <span class="enp-editor_sceneHandlerHorz" id="js-handlerHorizontal"></span>
+                    <span class="enp-editor_sceneHandlerVert" id="js-handlerVerical"></span>
+                    <span class="enp-editor_sceneSize" id="js-size"></span>
+                    <span class="enp-editor_sceneSave" id="js-saveScene">
+                        zapisz
+                    </span>
+                    <div id="js-sceneContent" class="enp-editor_aceHolder"></div>  
+                </div>
+            </div>
+            <div class="enp-editor_sidebar">
+               
+            </div>
+            <div class="enp-editor_actionbar"> 
+                <ul>
+                    <li class="is-active"><a href="#" id="js-togglePreview"><i class="icon-buffer"></i></a></li>
+                    <li><a href="#" id="js-toggleHtmlView"><i class="icon-html5"></i></a></li>
+                    <li><a href="#" id="js-toggleHCSSView"><i class="icon-css3"></i></a></li>
+                    <li><a href="#" id="js-toggleJsView"><i class="icon-code"></i></a></li>
+                </ul>
+            </div>
+        </div>
     <div id="app">
       {{ count }}
     </div>
+    <div id="js-scriptsGlobal"></div>
+        <div id="js-styleGlobal"></div>
     <script src="build.js"></script>
   </body>
 </html>
