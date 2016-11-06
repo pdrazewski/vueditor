@@ -1,20 +1,7 @@
 // main.js
 
 import Vue from 'vue'
-import Vuex from 'vuex'
-// import store from './vuex/store'
-
-Vue.use(Vuex)
-
-const store2 = new Vuex.Store({
-  state: {
-    count: 0
-  },
-  mutations: {
-  	increment: state => state.count++,
-    decrement: state => state.count--
-  }
-})
+import store from './vuex/store'
 
 
 const Counter = {
@@ -26,11 +13,11 @@ const Counter = {
     }
   }
 } 
-const app9 = new Vue({
-  el: '#app-9',
+const app = new Vue({
+  el: '#app',
   // provide the store using the "store" option.
   // this will inject the store instance to all child components.
-  store: store2,
+  store,
   components: { Counter },
   template: `
     <div class="app">
@@ -43,10 +30,10 @@ const app9 = new Vue({
   `,
   methods: {
     increment () {
-      store2.commit('increment')
+      store.commit('increment')
     },
     decrement () {
-    	store2.commit('decrement')
+    	store.commit('decrement')
     }
   }
 })
