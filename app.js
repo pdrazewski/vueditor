@@ -1,30 +1,30 @@
 // main.js
 
-import Vue from 'vue'
-import store from './vuex/store'
-import Counter from './components/Counter.vue'
-import Modes from './components/Modes.vue'
+import Vue from 'vue';
+import store from './vuex/store';
+import Counter from './components/Counter.vue';
+import Modes from './components/Modes.vue';
+import Ruler from './components/Ruler.vue';
+import Scene from './components/Scene.vue';
+import Tree from './components/Tree.vue';
 
 const app = new Vue({
   el: '#app',
-  store,
-  components: { Counter, Modes },
+  store, 
+  components: { 
+    Counter, 
+    Modes,
+    Scene,
+    Ruler,
+    Tree 
+  },
   template: `
     <div class="app">
+      <ruler></ruler>
+      <scene></scene>
+      <tree></tree>
       <counter></counter>
       <modes></modes>
-      <p>
-    <button @click="increment">+</button>
-    <button @click="decrement">-</button>
-  </p>
     </div>
-  `,
-  methods: {
-    increment () {
-      store.dispatch('increment')
-    },
-    decrement () {
-    	store.dispatch('decrement')
-    }
-  }
+  `
 })

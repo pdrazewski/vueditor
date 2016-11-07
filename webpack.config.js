@@ -14,6 +14,10 @@ module.exports = {
 			{
 				test: /\.vue$/,
 				loader: 'vue'
+			},
+			{
+			    test: /\.scss$/,
+			    loader: 'style!css!sass?sourceMap!postcss'
 			}
 		]
 	},
@@ -25,5 +29,8 @@ module.exports = {
 	  alias: {
 	    'vue$': 'vue/dist/vue.js'
 	  }
+	},
+	postcss: function() {
+    	return [autoprefixer];
 	}
 }

@@ -1,15 +1,32 @@
 <template>
-  <div>{{ count }}</div> 
+  <div>
+	{{ count }}
+	<p>
+		<button @click="increment">+</button>
+		<button @click="decrement">-</button>
+	</p>
+  </div> 
 </template>
 
 <script>
+
+import store from '../vuex/store'
+
 module.exports = {
-  computed: {
-    count () {
-      console.log(this.$store)
-      return this.$store.state.count
-    }
-  }
+	store,
+  	methods: {
+		increment () {
+			this.$store.dispatch('increment')
+		},
+		decrement () {
+			this.$store.dispatch('decrement')
+		}
+  	},
+  	computed: {
+		count () {
+	  		return this.$store.state.count
+		}
+  	}
 }
 </script>
 
