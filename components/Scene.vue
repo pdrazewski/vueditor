@@ -6,15 +6,24 @@
 		<span class="enp-editor_sceneSave" id="js-saveScene">
 			zapisz
 		</span> 
+		<div id="js-sceneContent" class="enp-editor_aceHolder">
+				<h1 class="vcard-names">
+			    <span class="vcard-fullname d-block" itemprop="name">pdrazewski</span>
+			    <span class="vcard-username d-block" itemprop="additionalName">pdrazewski</span>
+			  </h1>
+		</div> 
+		<code><pre>{{dom}}</pre></code>
 	</div> 
 </template>
 
 <script>
+
+
+							
 module.exports = {
   computed: {
-	count () {
-	  console.log(this.$store)
-	  return this.$store.state.count
+	dom () {
+	  return this.$store.getters.getScene
 	}
   }
 }

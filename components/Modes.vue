@@ -10,7 +10,6 @@
 	    </ul>
 	    <div id="js-scriptsGlobal"></div>
     	<div id="js-styleGlobal"></div>
-    	<div id="js-sceneContent" class="enp-editor_aceHolder"></div> 
 	</div>
 </template>
 

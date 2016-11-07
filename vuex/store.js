@@ -15,7 +15,7 @@ const store = new Vuex.Store({
     	toolbar: {}
     },
     scene: {
-
+      
     }
   },
   mutations: {
@@ -23,7 +23,12 @@ const store = new Vuex.Store({
     decrement: state => state.count--
   },
   getters: {
-
+    getScene: function(){
+      var someDOMElement = document.getElementById('app');
+      var jsonOutput = domJSON.toJSON(someDOMElement);
+      return jsonOutput;
+      
+    }
   },
   actions: {
   	increment ({ commit }) {

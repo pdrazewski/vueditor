@@ -19,12 +19,16 @@ const app = new Vue({
     Tree 
   },
   template: `
-    <div class="app">
-      <ruler></ruler>
-      <scene></scene>
-      <tree></tree>
-      <counter></counter>
-      <modes></modes>
+    <div class="enp-editor_wrapper">
+        <div class="enp-editor_scene">
+            <div class="app">
+              <ruler></ruler>
+              <scene></scene>
+              <tree></tree>
+              <counter></counter>
+              <modes></modes>
+            </div>
+        </div>
     </div>
   `
 })
