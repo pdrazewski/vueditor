@@ -2,24 +2,25 @@
 
 <template>
    <div class="enp-editor_actionbar"> 
-	    <ul>
-	        <li class="is-active"><a href="#" id="js-togglePreview"><i class="icon-buffer"></i></a></li>
-	        <li><a href="#" id="js-toggleHtmlView"><i class="icon-html5"></i></a></li>
-	        <li><a href="#" id="js-toggleHCSSView"><i class="icon-css3"></i></a></li>
-	        <li><a href="#" id="js-toggleJsView"><i class="icon-code"></i></a></li>
+	    <ul style="width: auto">
+	        <li class="is-active"><a  id="js-togglePreview" @click="changeMode('editor')">Editor</a></li>
+	        <li><a  id="js-toggleHtmlView"  @click="changeMode('html')">HTML</a></li>
+	        <li><a  id="js-toggleHCSSView"  @click="changeMode('css')">CSS</a></li>
+	        <li><a  id="js-toggleJsView" @click="changeMode('js')">JS</a></li>
+	        <li><a  id="js-toggleDebugView" @click="changeMode('debug')">Debug</a></li>
 	    </ul>
-	    <div id="js-scriptsGlobal"></div>
-    	<div id="js-styleGlobal"></div>
 	</div>
 </template>
 
 <script>
+import store from '../vuex/store'
+
 module.exports = {
-  computed: {
-    count () {
-      	console.log(this.$store)
-      	return this.$store.state.count
-    }
+	store,
+	methods: {
+		changeMode (mode) {
+			this.$store.dispatch('changeMode', mode)
+		}
   }
 }
 </script>
