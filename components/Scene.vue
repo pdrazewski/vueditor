@@ -25,8 +25,6 @@
 </template>
 
 <script>
-
-
 module.exports = {
   computed: {
 	dom () {
