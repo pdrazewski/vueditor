@@ -24,7 +24,6 @@ const app = new Vue({
             <div class="app">
               <ruler></ruler>
               <scene></scene>
-              <tree></tree>
               <counter></counter>
               <modes></modes>
             </div>
